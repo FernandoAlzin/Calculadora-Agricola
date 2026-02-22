@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Custos Agrícolas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Custos Agrícolas</h1>
+        
+        <div class="calculator-form">
+            <div class="input-group">
+                <h2>Área</h2>
+                <input type="number" id="hectares" placeholder="Quantidade de Hectares" step="0.1">
+            </div>
+
+            <div class="input-group">
+                <h2>Insumos</h2>
+                <div class="input-row">
+                    <label>Sementes (R$/kg):</label>
+                    <input type="number" id="sementes" placeholder="Valor por kg">
+                    <input type="number" id="sementes-kg" placeholder="Kg por hectare">
+                </div>
+                <div class="input-row">
+                    <label>Fertilizantes (R$/kg):</label>
+                    <input type="number" id="fertilizantes" placeholder="Valor por kg">
+                    <input type="number" id="fertilizantes-kg" placeholder="Kg por hectare">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <h2>Defensivos</h2>
+                <div class="input-row">
+                    <label>Herbicidas (R$/L):</label>
+                    <input type="number" id="herbicidas" placeholder="Valor por litro">
+                    <input type="number" id="herbicidas-l" placeholder="Litros por hectare">
+                </div>
+                <div class="input-row">
+                    <label>Inseticidas (R$/L):</label>
+                    <input type="number" id="inseticidas" placeholder="Valor por litro">
+                    <input type="number" id="inseticidas-l" placeholder="Litros por hectare">
+                </div>
+                <div class="input-row">
+                    <label>Fungicidas (R$/L):</label>
+                    <input type="number" id="fungicidas" placeholder="Valor por litro">
+                    <input type="number" id="fungicidas-l" placeholder="Litros por hectare">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <h2>Outros Custos</h2>
+                <div class="input-row">
+                    <label>Mão de obra (R$/dia):</label>
+                    <input type="number" id="mao-obra" placeholder="Valor por dia">
+                    <input type="number" id="mao-obra-dias" placeholder="Dias necessários">
+                </div>
+                <div class="input-row">
+                    <label>Maquinário (R$/hora):</label>
+                    <input type="number" id="maquinario" placeholder="Valor por hora">
+                    <input type="number" id="maquinario-horas" placeholder="Horas necessárias">
+                </div>
+            </div>
+
+            <button onclick="calcularCustos()">Calcular Custos</button>
+        </div>
+
+        <div class="results" id="results">
+            <h2>Resultados</h2>
+            <div class="result-grid">
+                <div class="result-item">
+                    <h3>Custo por Hectare</h3>
+                    <p id="custo-hectare">R$ 0,00</p>
+                </div>
+                <div class="result-item">
+                    <h3>Custo Total</h3>
+                    <p id="custo-total">R$ 0,00</p>
+                </div>
+            </div>
+            <div class="details" id="details">
+                <!-- Detalhes serão preenchidos via JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
